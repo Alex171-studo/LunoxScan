@@ -21,6 +21,7 @@ function searchManga() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const mangas = [
+        'Start raising dragons from today',
         'Naruto',
         'One Piece',
         'Dragon Ball',
