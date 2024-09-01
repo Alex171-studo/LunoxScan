@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: wheat;
 }
 
 header {
@@ -97,6 +97,11 @@ main {
 .manga-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+.manga-detail img {
+width: 300px;
+height:400px ;
 }
 
 .manga-item {
@@ -258,13 +263,7 @@ footer {
 .social-links a:hover {
     text-decoration: underline;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #f0f4f8, #e1e9ef);
-    color: #333;
-}
+
 
 header {
     background-color: #333;
@@ -413,12 +412,7 @@ a:hover {
     text-decoration: underline;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
-    color: #333;
+
 }
 
 header {
@@ -584,13 +578,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
-    color: #333;
-}
+
 
 header {
     background-color: #00796b;
@@ -828,12 +816,7 @@ a:hover {
 }
 
 /* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
-}
+
 
 /* En-tête */
 header {
@@ -968,12 +951,7 @@ header {
     }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #048a78;
-    margin: 0;
-    padding: 20px;
-}
+
 
 .results-container {
     max-width: 800px;
@@ -1001,6 +979,13 @@ p {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 .results-container h1 {
     color: #333;
 }
@@ -1095,4 +1080,23 @@ button:hover {
 
 .suggestions div:hover {
     background-color: #f0f0f0;
+}
+/* Supprimer les puces de la liste */
+.chapter-list {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+/* Styliser les liens pour qu'ils ne ressemblent pas à des liens */
+.chapter-list li a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: rgb(0, 0, 0); /* Change la couleur du texte en noir (ou une autre couleur de ton choix) */
+    font-weight: bold; /* Rendre le texte en gras (optionnel) */
+}
+
+/* Ajouter un effet au survol (hover) */
+.chapter-list li a:hover {
+    color: darkgray; /* Change la couleur au survol */
+    text-decoration: underline; /* Ajoute un soulignement au survol (optionnel) */
 }

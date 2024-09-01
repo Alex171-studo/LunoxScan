@@ -6,7 +6,7 @@ if (isset($_GET['query'])) {
     
     // Tableau de mangas avec les images associées et les liens
     $mangas = [
-        'Start Rising Dragon of today' => ['image' => 'Mangas/start_rising.jpg', 'link' => 'Start_rising.php'],
+        'Start Rising Dragon of today' => ['image' => 'start_rising.jpg', 'link' => 'Start_rising.php'],
         'One Piece' => ['image' => 'one_piece.jpg', 'link' => 'one_piece.php'],
         'Dragon Ball' => ['image' => 'dragon_ball.jpg', 'link' => 'dragon_ball.php'],
         'Attack on Titan' => ['image' => 'attack_on_titan.jpg', 'link' => 'attack_on_titan.php'],
@@ -33,10 +33,11 @@ if (isset($_GET['query'])) {
 
     <!-- En-tête -->
     <header>
-        <h1>Site de Manga</h1>
+        <div class="chapter-list"><a href="index.html"><h1>LunoxScan</h1></a></div>
+        
         <nav>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.php">À Propos</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
@@ -52,8 +53,8 @@ if (isset($_GET['query'])) {
                 // Créer un lien pour chaque manga avec une image
                 echo "<div class='result-item'>
                         <a href='" . $data['link'] . "'>
-                            <img src='images/" . $data['image'] . "' alt='" . htmlspecialchars($manga) . "'>
-                            <p>$manga</p>
+                            <img src='Mangas/" . htmlspecialchars($data['image']) . "' alt='" . htmlspecialchars($manga) . "'>
+                            <p>" . htmlspecialchars($manga) . "</p>
                         </a>
                       </div>"; // Afficher les résultats
             }
@@ -62,6 +63,15 @@ if (isset($_GET['query'])) {
         }
         ?>
     </div>
+
+    <footer>
+        <p>&copy; 2024 LunoxScan. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
 
     </body>
     </html>
