@@ -1099,3 +1099,7 @@ button:hover {
     color: darkgray; /* Change la couleur au survol */
     text-decoration: underline; /* Ajoute un soulignement au survol (optionnel) */
 }
+
+.hidden {
+    display: none;
+}
