@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start_rising - LunoxScan</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Mangas/start.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -21,7 +24,7 @@
 
     <main>
         <div class="manga-detail">
-            <img src="start.jpg" alt="One Piece">
+            <img src="Mangas/start.jpg" alt="One Piece">
             <div class="manga-info">
                 <h2>Start raising dragons from today</h2>
                 
@@ -54,6 +57,12 @@
 
     <footer>
         <p>&copy; 2024 LunoxScan. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+        </div>
     </footer>
 </body>
 

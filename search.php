@@ -6,7 +6,7 @@ if (isset($_GET['query'])) {
     
     // Tableau de mangas avec les images associées et les liens
     $mangas = [
-        'Start Rising Dragon of today' => ['image' => 'Mangas/start_rising.jpg', 'link' => 'Start_rising.php'],
+        'Start Rising Dragon of today' => ['image' => 'Mangas/start.jpg', 'link' => 'Start_rising.php'],
         'One Piece' => ['image' => 'Mangas/one_piece.jpg', 'link' => 'one_piece.php'],
         'Dragon Ball' => ['image' => 'Mangas/dragon_ball.jpg', 'link' => 'dragon_ball.php'],
         'Attack on Titan' => ['image' => 'Mangas/attack_on_titan.jpg', 'link' => 'attack_on_titan.php'],
@@ -28,6 +28,9 @@ if (isset($_GET['query'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Résultats de la recherche</title>
         <link rel="stylesheet" href="styles.css"> <!-- Lien vers le CSS -->
+        <link rel="icon" href="Mangas/start.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     </head>
     <body>
 
