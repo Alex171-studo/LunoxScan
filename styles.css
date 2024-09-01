@@ -1100,6 +1100,4 @@ button:hover {
     text-decoration: underline; /* Ajoute un soulignement au survol (optionnel) */
 }
 
-.hidden {
-    display: none;
-}
+

@@ -1,27 +1,6 @@
-function searchManga() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const slides = document.getElementsByClassName('slide');
-    
-    let found = false;
-
-    for (let i = 0; i < slides.length; i++) {
-        const mangaTitle = slides[i].querySelector('img').alt.toLowerCase();
-        if (mangaTitle.includes(input)) {
-            slides[i].style.display = 'block';
-            found = true;
-        } else {
-            slides[i].style.display = 'none';
-        }
-    }
-
-    if (!found) {
-        alert('Aucun manga trouvé.');
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const mangas = [
-        'Start raising dragons from today',
+        'Start Rising Dragon of today',
         'Naruto',
         'One Piece',
         'Dragon Ball',
@@ -32,24 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchInput = document.querySelector('input[name="query"]');
     const suggestionsBox = document.getElementById('suggestions');
-    let suggestion = '';
 
-    searchInput.addEventListener('keyup', function(event) {
+    searchInput.addEventListener('keyup', function() {
         const query = this.value.toLowerCase();
         suggestionsBox.innerHTML = ''; // Effacer les suggestions précédentes
-        suggestion = '';
 
         if (query.length === 0) {
             return; // Ne rien faire si le champ est vide
         }
 
-        const filteredMangas = mangas.filter(manga => manga.toLowerCase().startsWith(query));
-
-        if (filteredMangas.length > 0) {
-            suggestion = filteredMangas[0]; // Prendre la première suggestion
-            this.value = query;
-            showSuggestion(query, suggestion);
-        }
+        const filteredMangas = mangas.filter(manga => manga.toLowerCase().includes(query));
 
         filteredMangas.forEach(manga => {
             const suggestionItem = document.createElement('div');
@@ -62,24 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             suggestionsBox.appendChild(suggestionItem);
         });
-    });
 
-    searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Tab' && suggestion !== '') {
-            event.preventDefault(); // Empêcher le comportement par défaut
-            this.value = suggestion; // Compléter avec la suggestion
-            suggestionsBox.innerHTML = ''; // Effacer les suggestions
+        if (filteredMangas.length === 0) {
+            suggestionsBox.innerHTML = '<div class="no-suggestion">Aucune suggestion trouvée</div>';
         }
     });
 
-    function showSuggestion(query, suggestion) {
-        searchInput.value = query; // Garder la saisie de l'utilisateur
-        const remainder = suggestion.slice(query.length); // Partie restante de la suggestion
-        const displayValue = query + remainder;
-        searchInput.setAttribute('placeholder', displayValue); // Afficher la suggestion comme placeholder
-    }
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Tab' && suggestionsBox.children.length > 0) {
+            event.preventDefault(); // Empêcher le comportement par défaut
+            searchInput.value = suggestionsBox.children[0].textContent; // Compléter avec la première suggestion
+            suggestionsBox.innerHTML = ''; // Effacer les suggestions
+        }
+    });
 });
-
-
-
-

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LunoxScan</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Mangas/start.ico" type="image/x-icon"> <!-- Vérifie le type d'image ici -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Lien vers Font Awesome -->
+    <link rel="icon" href="Mangas/start.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
     <main>
         <!-- Section de Recherche -->
         <form action="search.php" method="GET">
-            <input type="text" name="query" id="search" placeholder="Rechercher un manga..." autocomplete="off" required/>
+            <input type="text" name="query" id="searchInput" placeholder="Rechercher un manga..." autocomplete="off" required/>
             <div id="suggestions" class="suggestions"></div>
             <button type="submit">Rechercher</button>
         </form>
@@ -46,56 +46,33 @@
         <section class="featured-mangas">
             <h2>Mangas en Vedette</h2>
             <div class="manga-list">
-                <div class="manga-item">
-                    <a href="Start_rising.php"><img src="Mangas/start_rising.jpg" alt="Start Rising"></a> 
+                <div class="manga-item slide">
+                    <a href="Start_rising.php"><img src="Mangas/start_rising.jpg" alt="Start Rising Dragon of today"></a> 
                     <h3><a href="Start_rising.php?id=1">Start Rising Dragon of today</a></h3>
                     <p>Genres : Action, Aventure, Système, Comédie, Fantaisie, Harem, Manhua</p>
                     <p>Note : ★★★★☆</p>
                 </div>
-                <div class="manga-item">
+                <div class="manga-item slide">
                     <img src="manga2.jpg" alt="Naruto">
                     <h3><a href="manga.html?id=2">Naruto</a></h3>
                     <p>Auteur : Masashi Kishimoto</p>
                     <p>Genres : Action, Aventure</p>
                     <p>Note : ★★★★★</p>
                 </div>
-                <div class="manga-item">
+                <div class="manga-item slide">
                     <img src="manga3.jpg" alt="Attack on Titan">
                     <h3><a href="manga.html?id=3">Attack on Titan</a></h3>
                     <p>Auteur : Hajime Isayama</p>
                     <p>Genres : Action, Fantastique</p>
                     <p>Note : ★★★★☆</p>
                 </div>
-                <div class="manga-item">
+                <div class="manga-item slide">
                     <img src="manga4.jpg" alt="My Hero Academia">
                     <h3><a href="manga.html?id=4">My Hero Academia</a></h3>
                     <p>Auteur : Kohei Horikoshi</p>
                     <p>Genres : Action, Fantastique</p>
                     <p>Note : ★★★★☆</p>
                 </div>
-                <!-- Plus de mangas -->
-            </div>
-        </section>
-
-        <!-- Section des Mangas Populaires -->
-        <section class="popular-mangas hidden"> <!-- Ajout de la classe hidden pour masquer la section -->
-            <h2>Mangas Populaires</h2>
-            <div class="manga-list">
-                <div class="manga-item">
-                    <img src="manga5.jpg" alt="Demon Slayer">
-                    <h3><a href="manga.html?id=5">Demon Slayer</a></h3>
-                    <p>Auteur : Koyoharu Gotouge</p>
-                    <p>Genres : Action, Fantastique</p>
-                    <p>Note : ★★★★★</p>
-                </div>
-                <div class="manga-item">
-                    <img src="manga6.jpg" alt="Tokyo Revengers">
-                    <h3><a href="manga.html?id=6">Tokyo Revengers</a></h3>
-                    <p>Auteur : Ken Wakui</p>
-                    <p>Genres : Action, Drame</p>
-                    <p>Note : ★★★★☆</p>
-                </div>
-                <!-- Plus de mangas populaires -->
             </div>
         </section>
 
@@ -103,19 +80,18 @@
         <section class="recommended-mangas">
             <h2>Mangas Recommandés</h2>
             <div class="manga-list">
-                <div class="manga-item">
+                <div class="manga-item slide">
                     <img src="manga7.jpg" alt="Fullmetal Alchemist">
                     <h3><a href="manga.html?id=7">Fullmetal Alchemist</a></h3>
                     <p>Auteur : Hiromu Arakawa</p>
                     <p>Un monde où l'alchimie est la science principale.</p>
                 </div>
-                <div class="manga-item">
+                <div class="manga-item slide">
                     <img src="manga8.jpg" alt="Death Note">
                     <h3><a href="manga.html?id=8">Death Note</a></h3>
                     <p>Auteur : Tsugumi Ohba</p>
-                    <p>Un carnet qui tue tout ceux dont le nom y est inscrit.</p>
+                    <p>Un carnet qui tue tous ceux dont le nom y est inscrit.</p>
                 </div>
-                <!-- Plus de mangas recommandés -->
             </div>
         </section>
 

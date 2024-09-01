@@ -6,17 +6,17 @@ if (isset($_GET['query'])) {
     
     // Tableau de mangas avec les images associées et les liens
     $mangas = [
-        'Start Rising Dragon of today' => ['image' => 'start_rising.jpg', 'link' => 'Start_rising.php'],
-        'One Piece' => ['image' => 'one_piece.jpg', 'link' => 'one_piece.php'],
-        'Dragon Ball' => ['image' => 'dragon_ball.jpg', 'link' => 'dragon_ball.php'],
-        'Attack on Titan' => ['image' => 'attack_on_titan.jpg', 'link' => 'attack_on_titan.php'],
-        'My Hero Academia' => ['image' => 'my_hero_academia.jpg', 'link' => 'my_hero_academia.php'],
-        'Death Note' => ['image' => 'death_note.jpg', 'link' => 'death_note.php']
+        'Start Rising Dragon of today' => ['image' => 'Mangas/start_rising.jpg', 'link' => 'Start_rising.php'],
+        'One Piece' => ['image' => 'Mangas/one_piece.jpg', 'link' => 'one_piece.php'],
+        'Dragon Ball' => ['image' => 'Mangas/dragon_ball.jpg', 'link' => 'dragon_ball.php'],
+        'Attack on Titan' => ['image' => 'Mangas/attack_on_titan.jpg', 'link' => 'attack_on_titan.php'],
+        'My Hero Academia' => ['image' => 'Mangas/my_hero_academia.jpg', 'link' => 'my_hero_academia.php'],
+        'Death Note' => ['image' => 'Mangas/death_note.jpg', 'link' => 'death_note.php']
     ];
 
     // Filtrer les mangas selon la requête
-    $results = array_filter($mangas, function($manga) use ($query) {
-        return stripos($manga, $query) !== false; // Recherche insensible à la casse
+    $results = array_filter($mangas, function($mangaName) use ($query) {
+        return stripos($mangaName, $query) !== false; // Recherche insensible à la casse
     }, ARRAY_FILTER_USE_KEY);
 
     // Affichage des résultats
@@ -52,8 +52,8 @@ if (isset($_GET['query'])) {
             foreach ($results as $manga => $data) {
                 // Créer un lien pour chaque manga avec une image
                 echo "<div class='result-item'>
-                        <a href='" . $data['link'] . "'>
-                            <img src='Mangas/" . htmlspecialchars($data['image']) . "' alt='" . htmlspecialchars($manga) . "'>
+                        <a href='" . htmlspecialchars($data['link']) . "'>
+                            <img src='" . htmlspecialchars($data['image']) . "' alt='" . htmlspecialchars($manga) . "'>
                             <p>" . htmlspecialchars($manga) . "</p>
                         </a>
                       </div>"; // Afficher les résultats
@@ -72,7 +72,7 @@ if (isset($_GET['query'])) {
             <a href="#">Instagram</a>
         </div>
     </footer>
-<div></div>
+    
     </body>
     </html>
     <?php
