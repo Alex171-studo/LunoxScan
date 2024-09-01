@@ -77,4 +77,5 @@ if (isset($_GET['query'])) {
     </html>
     <?php
 }
+
 ?>
