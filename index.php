@@ -22,53 +22,41 @@
     </header>
     
     <main>
-        <!-- Section Diaporama -->
-        <section class="carousel">
-            <h2>Mangas en Vedette</h2>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="featured1.jpg" alt="Featured Manga 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="featured2.jpg" alt="Featured Manga 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="featured3.jpg" alt="Featured Manga 3">
-                </div>
-            </div>
-        </section>
+       
 
         <!-- Section de Recherche -->
-        <section class="search-section">
-            <h2>Rechercher un Manga</h2>
-            <form action="search.html" method="get" class="search-form">
-                <input type="text" name="query" placeholder="Entrez le titre du manga..." required>
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
+        <form action="search.php" method="GET">
+        <input type="text" name="query" id="search" placeholder="Rechercher un manga..." required/>
+        <div id="suggestions" class="suggestions"></div>
+        <button type="submit">Rechercher</button>
+    </form>
 
-        <!-- Section de Filtrage par Genre -->
-        <section class="genre-filter">
+        
+        <div class="filter-section">
             <h2>Filtrer par Genre</h2>
-            <ul>
-                <li><a href="index.html?genre=action">Action</a></li>
-                <li><a href="index.html?genre=aventure">Aventure</a></li>
-                <li><a href="index.html?genre=fantastique">Fantastique</a></li>
-                <li><a href="index.html?genre=comédie">Comédie</a></li>
-                <li><a href="index.html?genre=drame">Drame</a></li>
-                <li><a href="index.html?genre=romance">Romance</a></li>
-            </ul>
-        </section>
+            <div class="filter-container">
+                <select id="genreSelect">
+                    <option value="">Genres</option>
+                    <option value="action">Action</option>
+                    <option value="aventure">Aventure</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                    <option value="horror">Horreur</option>
+                </select>
+            </div>
+        </div>
+        
+
+       
 
         <!-- Section des Mangas en Vedette -->
         <section class="featured-mangas">
             <h2>Mangas en Vedette</h2>
             <div class="manga-list">
                 <div class="manga-item">
-                    <img src="manga1.jpg" alt="One Piece">
-                    <h3><a href="manga.html?id=1">One Piece</a></h3>
-                    <p>Auteur : Eiichiro Oda</p>
-                    <p>Genres : Action, Aventure</p>
+                   <a href="Start_rising.php"><img src="Mangas/start_rising.jpg" alt="Start Rising"></a> 
+                    <h3><a href="Start_rising.php?id=1">Start Rising Dragon of today</a></h3>
+                    <p>Genres : Action, Aventure, Système, Comédie, Fantaisie, Harem, Manhua</p>
                     <p>Note : ★★★★☆</p>
                 </div>
                 <div class="manga-item">
@@ -148,6 +136,10 @@
         </section>
     </main>
 
+
+
+    <script src="script.js"></script>
+
     <footer>
         <p>&copy; 2024 Mangakakalot Clone. Tous droits réservés.</p>
         <div class="social-links">
@@ -156,5 +148,7 @@
             <a href="#">Instagram</a>
         </div>
     </footer>
+    
+    
 </body>
 </html>

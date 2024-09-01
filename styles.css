@@ -584,3 +584,515 @@ a {
 a:hover {
     text-decoration: underline;
 }
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+    color: #333;
+}
+
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Diaporama */
+.carousel {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sections */
+.search-section,
+.genre-filter,
+.featured-mangas,
+.popular-mangas,
+.recommended-mangas,
+.newsletter {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2,
+.genre-filter h2,
+.featured-mangas h2,
+.popular-mangas h2,
+.recommended-mangas h2,
+.newsletter h2 {
+    color: #00796b;
+}
+
+/* Formulaire de Newsletter */
+.newsletter form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #00796b;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #004d40;
+}
+
+/* Liens sociaux */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #00796b;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Styles des mangas */
+.manga-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.manga-item {
+    width: 23%;
+    margin: 1%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.manga-item:hover {
+    transform: scale(1.05);
+}
+
+.manga-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.manga-item h3 {
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+/* Réinitialisation des styles pour les liens */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries pour Responsivité */
+@media (max-width: 768px) {
+    .manga-item {
+        width: 48%; /* 2 items par ligne */
+    }
+
+    .newsletter input[type="email"] {
+        width: 70%; /* Plus large sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em; /* Réduction de la taille du titre */
+    }
+
+    .manga-item {
+        width: 100%; /* 1 item par ligne */
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%; /* Entier sur mobile */
+    }
+}
+.genre-filter {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.genre-filter h2 {
+    color: #00796b;
+}
+
+/* Styles pour les boutons de filtre */
+.genre-filter button {
+    margin: 5px 0; /* Ajoute de l'espace entre les boutons */
+}
+
+/* Media Queries pour le Filtre par Genre */
+@media (max-width: 768px) {
+    .genre-filter {
+        flex-direction: row; /* Change en ligne pour les écrans plus larges */
+        flex-wrap: wrap; /* Permet à plusieurs éléments de s'adapter sur une ligne */
+        justify-content: space-between; /* Espace entre les boutons */
+    }
+
+    .genre-filter button {
+        width: 48%; /* Deux boutons par ligne sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-filter {
+        flex-direction: column; /* Retourne en colonne sur petits écrans */
+    }
+
+    .genre-filter button {
+        width: 100%; /* Un bouton par ligne */
+    }
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+}
+
+/* En-tête */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Section de recherche */
+.search-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Champs de saisie dans la section de recherche */
+.search-section input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    max-width: 100%;
+}
+
+/* Bouton de recherche */
+.search-section button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+    background-color: #45a049;
+}
+
+/* Styles pour le filtre par genre */
+.filter-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Conteneur du filtre */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Espace entre les éléments */
+}
+
+/* Styles des éléments de filtre */
+.filter-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 150px; /* Largeur fixe */
+    min-width: 120px; /* Largeur minimum pour les petits écrans */
+}
+
+/* Liste des mangas */
+.manga-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Éléments de manga */
+.manga-item {
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.manga-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.manga-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Effet au survol des éléments de manga */
+.manga-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .search-section, .filter-section {
+        padding: 15px;
+    }
+
+    .search-section input[type="text"],
+    .filter-container select {
+        width: 100%;
+    }
+
+    .manga-item {
+        width: calc(50% - 20px); /* Deux éléments par ligne */
+    }
+}
+
+@media (max-width: 480px) {
+    .manga-item {
+        width: 100%; /* Un élément par ligne sur petits écrans */
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #048a78;
+    margin: 0;
+    padding: 20px;
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.results-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.results-container h1 {
+    color: #333;
+}
+
+.results-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.results-container p a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none;
+}
+
+.results-container p a:hover {
+    text-decoration: underline; /* Soulignement au survol des liens */
+}
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-item img {
+    width: 100px; /* Ajuster la taille de l'image */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.result-item p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.result-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.result-item a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Bords arrondis */
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.suggestions {
+    border: 1px solid #ccc;
+    background-color: white;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    border-radius: 0 0 10px 10px; /* Arrondir uniquement le bas */
+    z-index: 1000;
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
