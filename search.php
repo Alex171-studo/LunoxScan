@@ -72,7 +72,7 @@ if (isset($_GET['query'])) {
             <a href="#">Instagram</a>
         </div>
     </footer>
-
+<div></div>
     </body>
     </html>
     <?php

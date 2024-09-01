@@ -56,4 +56,5 @@
         <p>&copy; 2024 LunoxScan. Tous droits réservés.</p>
     </footer>
 </body>
+<div></div>
 </html>
