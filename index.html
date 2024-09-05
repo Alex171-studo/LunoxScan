@@ -1,1 +1,145 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunoxSacann</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Lien pour les icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span>Lunox</span>Sacann</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Aventure</a></li>
+                <li><a href="#">Tous</a></li>
+                <li><a href="#">VOSTFR</a></li>
+                <li><a href="#">VF</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <form action="search.php" method="GET" id="search-form">
+                <input type="text"  name="query" placeholder="Rechercher un manga..." 
+                autocomplete="off" required id="search-input"/>
+                <button type="submit">🔍</button>
+                <div id="suggestions" class="suggestions"></div>
+                
+                
+            </form>
+            
+        </div>
+    </header>
+    
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Start rising of dagon today</h2>
+                        <p>Start rising of dragon today est un manga d'avanture qui raconte l'histoire de Lynn et son parcours en 
+                            tant qu'éleveur de dragons <br>
+                            10 Chapitres sont disponibles.</p>
+                        <a href="#" class="read-manga-btn"><i class="fas fa-book"></i> Lire le manga</a>
+                    </div>
+                    <img src="Mangas/Start_rising/logo.jpg" alt="Diaporama 1">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Texte associé à l'image 2</h2>
+                        <p>Ceci est une description plus détaillée liée à l'image 2.</p>
+                        <a href="#" class="read-manga-btn"><i class="fas fa-book"></i> Lire le manga</a>
+                    </div>
+                    <!-- Correction de la balise img -->
+                    <img src="Mangas/Start_rising/logo.jpg" alt="Diaporama 2">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <div class="carousel-text">
+                        <h2>Texte associé à l'image 3</h2>
+                        <p>Ceci est une description plus détaillée liée à l'image 3.</p>
+                        <a href="#" class="read-manga-btn"><i class="fas fa-book"></i> Lire le manga</a>
+                    </div>
+                    <img src="Mangas/Start_rising/logo.jpg" alt="Diaporama 3">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <main>
+        <section class="anime">
+            <h2>Commencer la lecture</h2>
+        <div class="anime-grid">
+            <div class="anime-item">
+                <a href="Start_rising.html"><img src="Mangas/Start_rising/logo.jpg" alt="Anime 1"></a>
+                <h2>Start rising of dagon <br> today <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+            <div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div><div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+            <div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+            <div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+            <div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+            <div class="anime-item">
+                <img src="Mangas/Start_rising/logo.jpg" alt="Anime 1">
+                <h2>Un voyage à travers <br>un autre monde <br> 
+                <div class="star">★★★★☆</div>
+                </h2>
+            </div>
+        </div>
+
+        </section>
+            
+    </main>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+        </div>
+        <p>© 2024 LunoxSacann. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script> <!-- Placement correct du script -->
+</body>
+</html>
+
